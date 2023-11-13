@@ -29,11 +29,11 @@ const App = () => {
     if (window.confirm(`Do you want to delete ${event.target.name}???`)) {
       phoneBookService.deletePhoneDetails(event.target.id)
       .then(response => {
-        const revisedPersons = persons.filter(person => person.id !== Number(event.target.id))
+        const revisedPersons = persons.filter(person => person.id !== event.target.id)
         setPersons(revisedPersons)
         console.log(`Contact Deleted with response status ${response.statusText}`)
       })
-      .catch(error => displayMessage({ text: error.message, isError: true }))
+      .catch(error => displayMessage({ text: error.response.data.message, isError: true }))
     }
   }
 
@@ -50,7 +50,7 @@ const App = () => {
             setNewName('')
             setNewNumber('')
           })
-          .catch(() => displayMessage({ text: `Information of ${copy.name} has been already deleted`, isError: true }))
+          .catch((error) => displayMessage({ text: error.response.data.message, isError: true }))
       }
     } else {
       const newPhoneDetails = { name: newName, number: newNumber }
@@ -61,7 +61,9 @@ const App = () => {
           setNewName('')
           setNewNumber('')
         })
-        .catch(error => displayMessage({ text: error.message, isError: true }))
+        .catch(error => {
+          displayMessage({ text: error.response.data.message, isError: true })
+        })
     }
   }
   
