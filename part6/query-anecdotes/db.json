@@ -1,0 +1,44 @@
+{
+  "anecdotes": [
+    {
+      "content": "ddddd",
+      "votes": 100,
+      "id": 1
+    },
+    {
+      "content": "ddddd",
+      "votes": 87,
+      "id": 2
+    },
+    {
+      "content": "asdadadas",
+      "votes": 28,
+      "id": 3
+    },
+    {
+      "content": "asdadasdasdas",
+      "votes": 27,
+      "id": 4
+    },
+    {
+      "content": "adasdadasd",
+      "votes": 16,
+      "id": 5
+    },
+    {
+      "content": "TOPPPP",
+      "votes": 28,
+      "id": 6
+    },
+    {
+      "content": "asdadadas",
+      "votes": 1,
+      "id": 7
+    },
+    {
+      "content": "asdadasdasdas",
+      "votes": 0,
+      "id": 8
+    }
+  ]
+}

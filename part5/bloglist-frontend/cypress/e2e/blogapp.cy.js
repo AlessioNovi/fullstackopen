@@ -39,11 +39,10 @@ describe('Blog app', function () {
     });
 
     it('user can create a new blog', function () {
-      // cy.contains('Show Create Form').click();
-      // cy.get('#title').type('new blog');
-      // cy.get('#url').type('newurl');
-      // cy.contains('Create Blog').click();
-      cy.createBlog({ title: 'tt', url: '11' });
+      cy.contains('Show Create Form').click();
+      cy.get('#title').type('new blog');
+      cy.get('#url').type('newurl');
+      cy.contains('Create Blog').click();
       cy.get('.blog').should('have.length', 1);
     });
 
