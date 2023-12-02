@@ -1,0 +1,15 @@
+GET http://localhost:3001/api/patients
+###
+
+POST http://localhost:3001/api/patients/d2773c6e-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "description": "basda",
+  "date": "2020/20/21",
+  "specialist": "stocazzo",
+  "type": "OccupationalHealthcare",
+  "employerName": "gino strada",
+  "sickLeave": {"startDate": "20202", "endDate": "20202"}
+}
+
